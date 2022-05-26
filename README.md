@@ -1,4 +1,5 @@
 ## A web-app for uploading code snippets and searching them.
+#### In progress...
 
 ## Usage
 
@@ -34,3 +35,4 @@
 >- Make a copy of said array for searching, minimizing GET requests
 >- Pass data using props from child <-> parent
 
+![kuva](https://user-images.githubusercontent.com/66220187/170560380-a411e202-482a-414e-a9b3-ae781751f8eb.png)
