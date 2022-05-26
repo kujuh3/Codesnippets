@@ -1,0 +1,25 @@
+{
+  "name": "codesnippets",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+	"start": "node server/index.js",
+	"build": "cd client && npm install && npm run build"
+  },
+  "engines": {
+	"node": "16.15.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kujuh3/codesnippets.git"
+  },
+  "keywords": [],
+  "author": "kujala",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kujuh3/codesnippets/issues"
+  },
+  "homepage": "https://github.com/kujuh3/codesnippets#readme"
+}
