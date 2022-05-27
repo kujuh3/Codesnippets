@@ -1,5 +1,6 @@
 ## A web-app for uploading code snippets and searching them.
-#### In progress...
+#### Since this app doesn't use databases, it's not really suitable for any other than personal hosting. And because of that, consider this depo abandoned - I'll be making a real fullstack version in another depo.
+####
 
 ## Usage
 
