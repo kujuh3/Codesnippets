@@ -1,4 +1,3 @@
-const PORT = process.env.PORT || '3001';
 const express = require('express');
 const app = express();
 const path = require('path');
@@ -10,6 +9,7 @@ const cors = require('cors');
 
 const dirpath = path.join(__dirname, 'codes');
 
+const port = 3001;
 
 var fs = require('fs');
 
@@ -27,12 +27,6 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(morgan('dev'));
-
-/* SERVING FRONTEND IN DEPLOYMENT */
-app.use(express.static(path.resolve(__dirname, '../client/build')));
-app.get('/', (req, res) => {
-  res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
-});
 
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -125,7 +119,7 @@ app.post("/newsnippet", async (req, res) => {
 
         WriteNewDescription(newDescription);
         //Use the mv() method to place the file in upload directory (i.e. "uploads")
-        newFile.mv('./codes/' + newFile.name);
+        newFile.mv('./server/codes/' + newFile.name);
         readFiles(dirpath);
         //send response
         res.send({
@@ -143,6 +137,6 @@ app.post("/newsnippet", async (req, res) => {
 }
 })
 
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}.`);
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}.`);
 });

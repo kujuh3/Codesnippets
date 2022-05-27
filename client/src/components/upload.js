@@ -27,7 +27,7 @@ function FileUploadPage(){
         formData.append('file', selectedFile);
         formData.append('description', codeDescription);
 		fetch(
-			'/newsnippet',
+			'http://localhost:3001/newsnippet',
 			{
 				method: 'POST',
 				body: formData,
@@ -36,6 +36,11 @@ function FileUploadPage(){
 			.then((response) => response.json())
 			.then((result) => {
 				console.log('Success:', result);
+                alert("Filed uploaded - it'll appear in listing in about 1min")
+                setCodeName("");
+                setCodeDescription("");
+                setSelectedFile();
+                setIsFilePicked(false);
 			})
 			.catch((error) => {
 				console.error('Error:', error);
@@ -53,6 +58,7 @@ function FileUploadPage(){
                 label="Name" 
                 variant="standard" 
                 color="warning"
+                value={codeName}
                 onChange={(e) => setCodeName(e.target.value)}
                 sx={{width: "90%", marginBottom: "20px", input: {color: "white", borderBottom: "1px solid white"}, label: {color: "#ffffffa3"}}} 
             />
@@ -63,6 +69,7 @@ function FileUploadPage(){
                 label="Description" 
                 variant="standard" 
                 color="warning" 
+                value={codeDescription}
                 onChange={(e) => setCodeDescription(e.target.value)}
                 sx={{width: "90%", marginBottom: "20px", label: {color: "#ffffffa3"}}} 
             />

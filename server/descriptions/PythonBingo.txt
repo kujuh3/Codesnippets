@@ -1,3 +1,0 @@
-This program reads a file, first row being a call of winning numbers. Then a list of 5x5 bingo boards, separated by one empty line.
-The program goes through every board marking each called number with an X. Then the program goes through each board and marks the board that wins LAST.
- 
