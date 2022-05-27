@@ -1,3 +1,4 @@
+const PORT = process.env.PORT || '3001';
 const express = require('express');
 const app = express();
 const path = require('path');
@@ -9,7 +10,6 @@ const cors = require('cors');
 
 const dirpath = path.join(__dirname, 'codes');
 
-const port = 3001;
 
 var fs = require('fs');
 
@@ -143,6 +143,6 @@ app.post("/newsnippet", async (req, res) => {
 }
 })
 
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}.`);
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}.`);
 });
