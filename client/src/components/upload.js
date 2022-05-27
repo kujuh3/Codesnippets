@@ -27,7 +27,7 @@ function FileUploadPage(){
         formData.append('file', selectedFile);
         formData.append('description', codeDescription);
 		fetch(
-			'http://localhost/newsnippet',
+			'/newsnippet',
 			{
 				method: 'POST',
 				body: formData,
