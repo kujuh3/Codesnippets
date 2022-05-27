@@ -15,7 +15,7 @@ function App() {
 
     /* Code snippets and their descriptions */
     useEffect(() => {
-        fetch('http://localhost:35046/snippets', {
+        fetch('http://localhost:3001/snippets', {
         method: 'GET',
         headers: {
             Accept: 'application/json',

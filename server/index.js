@@ -9,7 +9,7 @@ const cors = require('cors');
 
 const dirpath = path.join(__dirname, 'codes');
 
-const port = 35046;
+const port = 3001;
 
 var fs = require('fs');
 
