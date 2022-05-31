@@ -1,5 +1,5 @@
 ## A web-app for uploading code snippets and searching them.
-#### Since this app doesn't use databases, it's not really suitable for any other than personal hosting. And because of that, consider this depo abandoned - I'll be making a real fullstack version in another depo.
+#### Since this app doesn't use databases, it's not really suitable for any other than personal hosting. And because of that, consider this depo abandoned - A fullstack version that is more polished exists in my repo: <link>https://github.com/kujuh3/Codesnippets_React-Node-Express-PostgreSQL</link>  
 ####
 
 ## Usage
